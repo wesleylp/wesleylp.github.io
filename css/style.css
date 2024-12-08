@@ -1,0 +1,113 @@
+body {
+    font-family: "Quicksand", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(0, 0, 0, 0.7); 
+}
+
+a {
+    color: #070ac4;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    a:hover, a:active, a:focus {
+      color: #070ac4;
+      outline: none;
+      text-decoration: none !important; 
+}
+
+p {
+    margin-bottom: 1.5em; }
+
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;    
+    padding: 20px;
+    position: fixed;
+    height: 100%;    
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.profile img {
+    width: 150px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;      
+    margin-left: 25px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
+.profile h2 {
+    margin: 10px 0;
+    text-align: center; /* Centraliza o texto */
+}
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #555;
+    /* border-radius: 5px; */
+}
+
+.content {
+    margin-left: 300px;
+    padding: 20px;
+    width: calc(100% - 3000px);
+    flex-grow: 1;
+    padding: 20px;
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+main h1, main h2 {
+    color: #333;
+}
+
+main p {
+    line-height: 1.6;
+}
