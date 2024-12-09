@@ -9,9 +9,9 @@ body {
     line-height: 1.8;
     color: rgba(0, 0, 0, 0.7);     
 }
-/* @media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
     body {
-      font-size: 16px; } } */
+      font-size: 16px; } }
 
 a {
     color: #070ac4;
@@ -46,13 +46,13 @@ p {
 }
 
 .sidebar .profile img {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
     margin-bottom: 10px;      
     border-radius: 50%;
     object-fit: cover;
-    /* margin-left: 25px; */
+    margin-left: 25px;
     background-position: center center;
     background-repeat: no-repeat;
     position: relative; 
@@ -108,7 +108,8 @@ main section {
 }
 
 main h1, main h2 {
-    color: #333;
+    color: #000000;
+    margin-bottom: 10px;
 }
 
 main p {
