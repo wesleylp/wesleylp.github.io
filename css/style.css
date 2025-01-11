@@ -218,8 +218,14 @@ h1, h2, h3, h4, h5, h6 {
       padding: 0; } }
 
 .accordion-button.collapsed {
-        background-color: #f2f3f7;        
+        background-color: #f2f3f7;                
     }
 .accordion-button.collapsed:hover {
         background-color: #cfe2ff;
+        
     }
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
