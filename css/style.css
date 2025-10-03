@@ -14,7 +14,27 @@ body{
 }
 @media screen and (max-width: 992px) {
     body {
-      font-size: 16px; } }
+      font-size: 16px;
+      display: block; } 
+      .sidebar {
+        display: none; /* Esconde completamente a sidebar */
+    }
+    .content {
+    width: 100%;
+    margin-left: 0; /* Remove a margem esquerda */
+    float: none; /* Remove o float */
+    padding: 20px; /* Adiciona padding para o conteúdo */
+    }
+    .about {
+    padding-top: 1em;
+    padding-bottom: 2em;
+    }
+    
+    .narrow-content {
+        padding: 0;
+    }
+    
+    }
 
 .page {
     width: 100%;
