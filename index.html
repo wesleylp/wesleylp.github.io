@@ -3,906 +3,1480 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wesley L. Passos - Home page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wesley Lobato Passos</title>
+    <meta name="description"
+        content="Wesley Lobato Passos, D.Sc. — Professor at CEFET-RJ. Research in computer vision, machine learning and signal processing." />
+    <meta name="author" content="Wesley Lobato Passos" />
+    <meta name="color-scheme" content="light dark" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Wesley Lobato Passos" />
+    <meta property="og:description"
+        content="Professor at CEFET-RJ. Computer vision, machine learning and signal processing." />
+    <meta property="og:image" content="./imgs/profile-640.jpg" />
+
+    <!-- Set the theme before first paint to avoid a flash of the wrong colours. -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+            } catch (e) { /* private mode: fall back to the OS preference */ }
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css"
+        integrity="sha384-cxs0Bj979VdNByRZzAJ2KJWG8vH/kG7fwWZAIZW3Tmsw0rAuP/pu3I3LitFWEs18" crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia,serif'>W</text></svg>" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wesley Lobato Passos",
+      "alternateName": "Wesley L. Passos",
+      "jobTitle": "Professor",
+      "email": "mailto:wesley.passos@cefet-rj.br",
+      "image": "./imgs/profile-640.jpg",
+      "worksFor": {
+        "@type": "CollegeOrUniversity",
+        "name": "Federal Center for Technological Education (CEFET-RJ)",
+        "url": "https://www.cefet-rj.br/index.php/english-version"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "COPPE/Federal University of Rio de Janeiro (UFRJ)" },
+        { "@type": "CollegeOrUniversity", "name": "Federal Center for Technological Education (CEFET-RJ)" }
+      ],
+      "knowsAbout": [
+        "Computer Vision",
+        "Machine Learning",
+        "Digital Signal Processing",
+        "Digital Image Processing"
+      ],
+      "sameAs": [
+        "https://orcid.org/0000-0002-8505-8265",
+        "https://lattes.cnpq.br/0652673084450084",
+        "https://scholar.google.com/citations?user=lKbLdIIAAAAJ",
+        "https://www.scopus.com/authid/detail.uri?authorId=57221317962",
+        "https://ieeexplore.ieee.org/author/37087998400",
+        "https://www.researchgate.net/profile/Wesley-Lobato-Passos",
+        "https://www.linkedin.com/in/wesley-lobato-passos",
+        "https://github.com/wesleylp"
+      ]
+    }
+    </script>
 </head>
 
 <body>
-    <div class="page">
-        <div class="container">
-            <aside class="sidebar">
-                <div class="profile text-center">
-                    <img src="./imgs/wesley2023.jpg" alt="Wesley L. Passos">
-                    <h1><a href="index.html">
-                            Wesley L. Passos
-                        </a></h1>
-                    <span class="position">Assistant Professor</span>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================ Top bar (small screens) ============================ -->
+    <header class="topbar">
+        <a class="topbar__brand" href="#home">
+            <img class="topbar__avatar" src="./imgs/profile-320.jpg" alt="" width="34" height="34" />
+            <span class="topbar__name">Wesley Lobato Passos</span>
+        </a>
+
+        <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                    d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+        </button>
+
+        <button class="icon-btn" type="button" data-menu-open aria-label="Open menu" aria-expanded="false"
+            aria-controls="sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+        </button>
+    </header>
+
+    <div class="scrim" data-scrim></div>
+
+    <div class="layout">
+        <!-- ============================ Sidebar ============================ -->
+        <aside class="sidebar" id="sidebar">
+            <button class="icon-btn sidebar__close" type="button" data-menu-close aria-label="Close menu">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" />
+                </svg>
+            </button>
+
+            <div class="profile">
+                <img class="profile__photo" src="./imgs/profile-640.jpg"
+                    srcset="./imgs/profile-320.jpg 320w, ./imgs/profile-640.jpg 640w" sizes="132px"
+                    alt="Wesley Lobato Passos" width="132" height="132" />
+                <p class="profile__name"><a href="#home">Wesley L. Passos</a></p>
+                <!-- <span class="profile__role">Professor</span> -->
+                <p class="profile__degree">D.Sc. Electrical Engineering &middot; COPPE/UFRJ</p>
+                <p class="profile__org">
+                    <strong>Professor</strong> &middot; CEFET-RJ<br />
+                    <strong>Postdoctoral Researcher</strong> &middot; COPPE/UFRJ
+                </p>
+            </div>
+
+            <nav class="nav" aria-label="Sections">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#teaching">Teaching</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar__profiles">
+                <ul class="linklist">
+                    <li>
+                        <a href="https://lattes.cnpq.br/0652673084450084" target="_blank" rel="noopener noreferrer">
+                            <i class="ai ai-lattes" aria-hidden="true"></i>
+                            <span>Lattes</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://orcid.org/0000-0002-8505-8265" target="_blank" rel="noopener noreferrer">
+                            <i class="ai ai-orcid" aria-hidden="true"></i>
+                            <span>ORCID</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=lKbLdIIAAAAJ" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                            <span>Google Scholar</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.scopus.com/authid/detail.uri?authorId=57221317962" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ai ai-scopus" aria-hidden="true"></i>
+                            <span>Scopus</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.webofscience.com/wos/author/rid/AAT-6819-2021" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ai ai-clarivate" aria-hidden="true"></i>
+                            <span>Web of Science</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://ieeexplore.ieee.org/author/37087998400" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ai ai-ieee" aria-hidden="true"></i>
+                            <span>IEEE Xplore</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.researchgate.net/profile/Wesley-Lobato-Passos" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="ai ai-researchgate" aria-hidden="true"></i>
+                            <span>ResearchGate</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/wesley-lobato-passos" target="_blank"
+                            rel="noopener noreferrer">
+                            <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                            <span>LinkedIn</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/wesleylp" target="_blank" rel="noopener noreferrer">
+                            <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                            </svg>
+                            <span>GitHub</span>
+                            <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                <path d="M15 3h6v6M10 14L21 3" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="linklist__mail">
+                        <a href="mailto:wesley.passos@cefet-rj.br">
+                            <svg class="mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="m22 7-10 6L2 7" />
+                            </svg>
+                            <span>wesley.passos@cefet-rj.br</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar__foot">
+                <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                    </svg>
+                </button>
+                <span>&copy; <span data-year>2026</span> Wesley Lobato Passos</span>
+            </div>
+        </aside>
+
+        <!-- ============================ Content ============================ -->
+        <main class="content" id="main">
+
+            <!-- ---------- Home ---------- -->
+            <section class="section" id="home">
+                <h1 class="hero__name">Wesley Lobato Passos</h1>
+
+                <ul class="roles">
+                    <li class="role">
+                        <p class="role__title">
+                            <strong>Professor</strong> &middot;
+                            <a href="https://www.cefet-rj.br/index.php/english-version" target="_blank"
+                                rel="noopener noreferrer">Federal Center for Technological Education (CEFET-RJ)</a>
+                        </p>
+                        <ul class="role__units">
+                            <li>
+                                <a href="https://www.cefet-rj.br/index.php/bacharelado-em-engenharia-de-controle-e-automacao"
+                                    target="_blank" rel="noopener noreferrer">Department of Control Systems and
+                                    Automation Engineering (COENCA-NI)</a>
+                            </li>
+                            <li>
+                                <a href="https://dippg.cefet-rj.br/ppeel/" target="_blank"
+                                    rel="noopener noreferrer">Postgraduate Program in Electrical Engineering
+                                    (PPEEL)</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="role">
+                        <p class="role__title">
+                            <strong>Postdoctoral Researcher</strong> &middot;
+                            <a href="https://www.ufrj.br" target="_blank" rel="noopener noreferrer">Federal University
+                                of Rio de Janeiro (UFRJ)</a>
+                        </p>
+                        <ul class="role__units">
+                            <li>
+                                <a href="https://www.cos.ufrj.br" target="_blank" rel="noopener noreferrer">Systems and
+                                    Computer Engineering Program (PESC), COPPE/UFRJ</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="education home-education">
+                    <li>
+                        <span class="degree">D.Sc. — Electrical Engineering</span>, COPPE/Federal University of Rio de
+                        Janeiro (UFRJ), Rio de Janeiro, RJ, Brazil,
+                        October 2024.
+                    </li>
+                    <li>
+                        <span class="degree">M.Sc. — Electrical Engineering</span>, COPPE/Federal University of Rio de
+                        Janeiro (UFRJ), Rio de Janeiro, RJ, Brazil,
+                        February 2019.
+                    </li>
+                    <li>
+                        <span class="degree">B.Sc. — Control Systems and Automation Engineering</span>, Federal Center
+                        for Technological Education (CEFET-RJ), Nova Iguaçu, RJ, Brazil,
+                        December 2016.
+                    </li>
+                </ul>
+
+                <div class="home-bio">
+                    <p>
+                        <strong>Wesley Lobato Passos</strong> was born in Rio de Janeiro, Brazil, in 1991.
+                        He received his D.Sc. in Electrical Engineering from
+                        <a href="http://www.coppe.ufrj.br" target="_blank" rel="noopener noreferrer">COPPE/UFRJ</a>, Rio
+                        de Janeiro, RJ, Brazil, in 2024.
+                        Previously, he received his M.Sc. in Electrical Engineering also from
+                        <a href="http://www.coppe.ufrj.br" target="_blank" rel="noopener noreferrer">COPPE/UFRJ</a> in
+                        2019, and his B.Sc. in Control
+                        Systems and Automation Engineering from the
+                        <a href="https://www.cefet-rj.br/index.php/english-version" target="_blank"
+                            rel="noopener noreferrer">Federal Center for Technological Education
+                            (CEFET-RJ)</a>, Nova Iguaçu, RJ, Brazil, in 2016.
+                    </p>
+                    <p>
+                        During his undergraduate studies, he participated in an academic exchange program at
+                        the <a href="https://www.uga.edu" target="_blank" rel="noopener noreferrer">University
+                            of Georgia (UGA)</a>, and took part in a summer research project at the
+                        <a href="https://www.iit.edu" target="_blank" rel="noopener noreferrer">Illinois
+                            Institute of Technology (IIT)</a>, both in the United States, through the
+                        Brazilian exchange program Science Without Borders from 2014 to 2015.
+                    </p>
+                    <p>
+                        He received the
+                        <a href="https://research.google/programs-and-events/past-programs/latin-america-research-awards/"
+                            target="_blank" rel="noopener noreferrer">Google Latin American Research
+                            Award</a> in 2019 and 2020 for the project on detecting potential
+                        <i>Aedes aegypti</i> mosquito breeding grounds using computer vision and machine
+                        learning techniques.
+                    </p>
+                    <p>
+                        Since 2024 he is a Professor with the Control Systems and Automation Engineering
+                        Department, and since 2025 a collaborating professor in the Graduate Program in
+                        Electrical Engineering (PPEEL), both at the
+                        <a href="https://www.cefet-rj.br/index.php/english-version" target="_blank"
+                            rel="noopener noreferrer">CEFET-RJ</a>. He is also a postdoctoral
+                        researcher with the Systems and Computer Engineering Program (PESC),
+                        <a href="http://www.coppe.ufrj.br" target="_blank" rel="noopener noreferrer">COPPE/UFRJ</a>. He
+                        is a member of the
+                        <a href="https://www.ieee.org" target="_blank" rel="noopener noreferrer">Institute
+                            of
+                            Electric and Electronic Engineers (IEEE)</a>: IEEE Circuits and Systems Society
+                        (CASS), IEEE Signal Processing Society (SPS), IEEE Young Professionals (YP), and the
+                        <a href="https://www.sbrt.org.br" target="_blank" rel="noopener noreferrer">Brazilian
+                            Telecommunication Society (SBrT)</a>.
+                    </p>
+                    <p>
+                        He has a background in Instrumentation, Control, and Industrial Automation projects.
+                        His research interests include Computer Vision, Machine Learning, and Signal
+                        Processing.
+                    </p>
                 </div>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#research">Research</a></li>
-                        <!-- <li><a href="#projects">Projects</a></li> juntar com research? -->
-                        <li><a href="#publications">Publications</a></li>
-                        <li><a href="#students">Students</a></li>
-                        <li><a href="#teaching">Teaching</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="footer">
-                    <!-- Colocar aqui o texto de rodapé. -->
+            </section>
+
+            <!-- ---------- Experience ---------- -->
+            <section class="section" id="experience">
+                <div class="section__head">
+                    <span class="section__eyebrow">Career</span>
+                    <h2 class="section__title">Experience</h2>
                 </div>
-            </aside>
 
-
-
-            <!-- Página Principal -->
-            <main class="content">
-                <section id="home" class="about">
-                    <div class="narrow-content">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="row row-padded-sm animate-box" data-animate-effect="fadeInLeft">
-                                    <div class="col-md-12">
-                                        <div class="about-desc">
-                                            <h2>Wesley L. Passos, Assistant Professor</h2>
-                                            <section id="affiliation">
-                                                <p align="right"><br>
-                                                    <a href="https://www.cefet-rj.br/index.php/english-version"
-                                                        target="_blank">
-                                                        Federal Center for Technological Education (CEFET-RJ)
-                                                    </a><br>
-                                                    <a href="https://dippg.cefet-rj.br/ppeel/"
-                                                        target="_blank">Postgraduate Program in Electrical Engineering
-                                                        (PPEEL) </a><br>
-                                                    <a href="https://www.cefet-rj.br/index.php/bacharelado-em-engenharia-de-controle-e-automacao"
-                                                        target="_blank">Department of Control Systems and Automation
-                                                        Engineering
-                                                        (COENCA-NI) </a>
-                                                </p>
-                                            </section>
-
-
-
-
-
-                                            <p></p>
-                                            <section id="Education"><br>
-                                                <li align="justify"><b>
-                                                        D.Sc. - Electrical Engineering -
-                                                        COPPE/Federal University of Rio de Janeiro (UFRJ),
-                                                        Rio de Janeiro, RJ, Brazil, October 2024.
-                                                    </b></li>
-                                                <li align="justify"><b>
-                                                        M.Sc. - Electrical Engineering -
-                                                        COPPE/Federal University of Rio de Janeiro (UFRJ),
-                                                        Rio de Janeiro, RJ, Brazil, February 2019.
-                                                    </b></li>
-                                                <li align="justify"><b>
-                                                        B.Sc. - Control Systems and Automation Engineering -
-                                                        Federal Center for Technological Education (CEFET-RJ),
-                                                        Nova Iguaçu, RJ, Brazil, December 2016.
-                                                    </b></li>
-                                            </section>
-
-
-
-
-
-                                            <p></p>
-                                            <section id="Bio"><br>
-                                                <!-- <h3>BIO</h3> -->
-                                                <p align="justify">
-                                                    <strong>Wesley Lobato Passos</strong>
-                                                    was born in Rio de Janeiro, Brazil, in 1991.
-                                                    He received his D.Sc. in Electrical Engineering from
-                                                    <a href="http://www.coppe.ufrj.br" target="_blank">COPPE/UFRJ</a>,
-                                                    Rio de Janeiro, RJ, Brazil,
-                                                    in 2024.
-                                                    Previously, he received his M.Sc. in Electrical Engineering
-                                                    also from <a href="http://www.coppe.ufrj.br"
-                                                        target="_blank">COPPE/UFRJ</a> in 2019,
-                                                    and his B.Sc. in Control Systems and Automation Engineering
-                                                    from the
-                                                    <a href="https://www.cefet-rj.br/index.php/english-version"
-                                                        target="_blank">
-                                                        Federal Center for Technological Education (CEFET-RJ)</a>,
-                                                    Nova Iguaçu, RJ, Brazil, in 2016.<br><br>
-
-                                                    During his undergraduate studies, he participated in an academic
-                                                    exchange program at the
-                                                    <a href="https://www.uga.edu" target="_blank">
-                                                        University of Georgia (UGA)</a>,
-                                                    and took part in a summer research project at the
-                                                    <a href="https://www.iit.edu" target="_blank">
-                                                        Illinois Institute of Technology (IIT)</a>,
-                                                    both in the United States, through the Brazilian exchange program
-                                                    Science Without Borders from 2014 to 2015.<br><br>
-
-                                                    He received the Google Latin American Research Award in 2019
-                                                    and 2020 for the project on detecting potential
-                                                    Aedes aegypti mosquito breeding grounds using computer
-                                                    vision and machine learning techniques.<br><br>
-
-                                                    Since 2024 he is a Professor with the
-                                                    Control Systems and Automation Engineering Department,
-                                                    and since 2025 a collaborating professor in the Graduate Program
-                                                    in
-                                                    Electrical
-                                                    Engineering (PPEEL), both
-                                                    at the
-                                                    <a href="https://www.cefet-rj.br/index.php/english-version"
-                                                        target="_blank">
-                                                        CEFET-RJ</a>.
-                                                    He is a member of the
-                                                    <a href="https://www.ieee.org" target="_blank">
-                                                        Institute of Electric and Electronic
-                                                        Engineers (IEEE)</a>: IEEE Circuits and Systems Society (CASS),
-                                                    IEEE Signal Processing Society (SPS), IEEE Young Professionals (YP),
-                                                    and the
-                                                    <a href="https://www.sbrt.org.br" target="_blank">
-                                                        Brazilian Telecommunication Society (SBrT)</a>. <br><br>
-
-                                                    He has a background in Instrumentation, Control, and
-                                                    Industrial Automation projects.
-                                                    His research interests include Computer Vision,
-                                                    Machine Learning, and Signal Processing.
-
-                                                </p>
-
-                                            </section>
-
-
-
-
-
-
-
-
-                                            <!-- RESEARCH -->
-                                            <section id="research"><br>
-                                                <h3>Research</h3>
-                                                <div class="accordion" id="accordionResearch">
-
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-ResearchAreas"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-ResearchAreas">
-                                                                Research Areas
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-ResearchAreas"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <!-- <p align="justify"> -->
-                                                                <li>Digital Signal Processing</li>
-                                                                <li>Digital Image Processing</li>
-                                                                <li>Computer Vision</li>
-                                                                <li>Machine Learning</li>
-                                                                <!-- </p> -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-Projects" aria-expanded="true"
-                                                                aria-controls="panel-Projects">
-                                                                Projects
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-Projects"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li>Brasil 6G - Phase 3</li>
-                                                                <li>Computer Vision and Signal Processing for
-                                                                    Non-Intrusive Monitoring of Biomedical Signals</li>
-                                                                <li>Automatic Detection of Potential <i>Aedes
-                                                                        aegypti</i> Breeding Grounds using Computer
-                                                                    Vision and Machine Learning</li>
-                                                                <li>Autonomous Robot for Identification of Emulsified
-                                                                    Liquids (ARIEL) - Phase 2 - Repsol/Sinopec</li>
-                                                                <li>Signal Processing Applied to Prediction, Detection,
-                                                                    and Diagnosis of Failures During Well Drilling -
-                                                                    Petrobras</li>
-                                                                <li>Evaluation of Multiphase Flow and Fluid Correlations
-                                                                    Using Computational Intelligence Techniques -
-                                                                    Petrobras</li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-
-                                            <!-- PUBLICATIONS -->
-                                            <section id="publications"><br>
-                                                <h3>Publications</h3>
-                                                <div class="accordion" id="accordionPublications">
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-Journals" aria-expanded="true"
-                                                                aria-controls="panel-Journals">
-                                                                Journal Papers
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-Journals"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <!-- <p align="justify"> -->
-                                                                <li style="text-align: justify;">Tavares, L. G. C.,
-                                                                    Passos, W. L., Martins, Bruno C., Rodrigues, M de
-                                                                    P., da Silva, E. A. B., Netto, S. L.,
-                                                                    <b>"Pixel-level detection and classification of
-                                                                        marine oil spills in aerial imagery with
-                                                                        annotation uncertainty handling"</b>,
-                                                                    <i>Marine Pollution Bulletin</i>, vol. 223, 118975,
-                                                                    February 2026.
-                                                                    DOI: 10.1016/j.marpolbul.2025.118975,
-                                                                    ISSN: 0025-326X.<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <li style="text-align: justify;">Zebendo,
-                                                                    N. H. C., Gois, J. N., Gonzalez, D. R. G.,
-                                                                    Passos, W. L., Araujo, G. M., de Lima, A. A.,
-                                                                    <b>"The usage of stabilometric information to
-                                                                        automatically predict balance evaluation
-                                                                        scores"</b>,
-                                                                    <i>Learning & Nonlinear Models</i>, vol. 23 no 2,
-                                                                    September 2025.
-                                                                    DOI: 10.21528/lnlm-vol23-no2-art1,
-                                                                    ISSN: 1676-2789.<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Barreto, C. S., Araujo, G. M.,
-                                                                    Haque, U., Netto, S.&nbsp; L., da Silva,
-                                                                    E. A. B., <b>"Toward improved
-                                                                        surveillance of <i>Aedes aegypti</i> breeding
-                                                                        grounds through artificially augmented
-                                                                        data"</b>, <i>Engineering
-                                                                        Applications of Artificial
-                                                                        Intelligence</i>, vol. 123, Part C,
-                                                                    August 2023.
-                                                                    DOI: 10.1016/j.engappai.2023.106488,
-                                                                    ISSN: 0952-1976.<br>
-                                                                    <br>
-                                                                </li>
-
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Araújo, G. M., de Lima, A. A.,
-                                                                    Netto, S. L., da Silva, E. A. B., <b>"Automatic
-                                                                        detection of <i>Aedes aegypti</i>
-                                                                        breeding grounds based on deep
-                                                                        networks with spatio-temporal
-                                                                        consistency"</b>, <i>Computers,
-                                                                        Environment and Urban Systems</i>,
-                                                                    vol. 93, 101754, April 2022.
-                                                                    DOI: 10.1016/j.compenvurbsys.2021.101754,
-                                                                    ISSN: 0198-9715.<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <li style="text-align: justify;">
-                                                                    Passos, W. L., Araujo, G. M.,
-                                                                    Gois, J. N., de Lima, A. A., <b>"A Gait Energy
-                                                                        Image-Based System for Brazilian Sign Language
-                                                                        Recognition"</b>, <i> IEEE Transactions on
-                                                                        Circuits and Systems I: Regular Papers</i>, vol.
-                                                                    68 no 11,
-                                                                    pp. 4761-4771, November 2021.
-                                                                    DOI: 10.1109/TCSI.2021.3091001,
-                                                                    ISSN: 1549-8328 / 1558-0806.
-                                                                    &nbsp;<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <li style="text-align: justify;">Cinelli,
-                                                                    L. P., de Oliveira, J. F., L., de Pinho,
-                                                                    V., Passos, W.&nbsp; L., Padilla, R.,
-                                                                    Braz, P., Galves, B., Dalvi, D.,
-                                                                    Lewenfus, G., Ferreira, J., Ji, A., de
-                                                                    Oliveira, F., Gonçalves, C., Netto, S.
-                                                                    L., da Silva, E. A., B., de Campos, M.
-                                                                    L. R., <b>"Automatic Event
-                                                                        Identification and Extraction from
-                                                                        Daily Drilling Reports Using an Expert
-                                                                        System and Artificial Intelligence"</b>,
-                                                                    <i>Journal of Petroleum Science and
-                                                                        Engineering</i>, October 2021.
-                                                                    DOI: 10.1016/j.petrol.2021.108939,
-                                                                    ISSN: 0920-4105.<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <li style="text-align: justify;">Padilla,
-                                                                    R., Passos, W. L., Dias, Thadeu L. B.,
-                                                                    Netto, S. L., da Silva, E. A. B., <b>"A
-                                                                        Comparative Analysis of Object
-                                                                        Detection Metrics with a Companion
-                                                                        Open-Source Toolkit"</b>, <i>Electronics,
-                                                                        Special Issue on Deep Learning Based
-                                                                        Object Detection</i>, vol. 10 no 33,
-                                                                    279, pp. 1-28, January 2021.
-                                                                    DOI: 10.3390/electronics10030279,
-                                                                    ISSN: 2079-9292.
-                                                                    &nbsp;<br>
-                                                                    <br>
-                                                                </li>
-
-                                                                <!-- </p> -->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-InternationalConferences"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-InternationalConferences">
-                                                                International Conferences
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-InternationalConferences"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Araújo, G. M., Haque, U.,
-                                                                    Cruz-Roldán, F., Netto, S. L., <b>
-                                                                        "IEEE ICIP 2023 Challenge on the Automatic
-                                                                        Detection of Mosquito Breeding Grounds"</b>,
-                                                                    <i>International Conference on Image Processing
-                                                                        Challenges and Workshops (ICIPCW)</i>, Kuala
-                                                                    Lumpur, Malaysia, October 2023.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Araújo, G. M., Gois, J. N., Lima, A. A.,<b>
-                                                                        "A Brazilian Sign Language Gesture Recognizing
-                                                                        System Using Gait Energy Image"</b>,
-                                                                    <i> Latin America Symposium on Circuits and
-                                                                        System (LASCAS)</i>, Arequipa, Peru, February
-                                                                    2021.
-                                                                </li>
-
-                                                                <br>
-
-
-                                                                <li style="text-align: justify;">Gameiro, P. V., Passos,
-                                                                    W. L., Araújo, G. M., Lima, A. A., Gois, J. N.,
-                                                                    Corbo, A. R., <b>
-                                                                        "A Brazilian Sign Language Video Database for
-                                                                        Automatic Recognition"</b>,
-                                                                    <i> Latin American Robotics Symposium (LARS)</i>,
-                                                                    Natal, Brazil, November 2020.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Araújo, G. M., Lima, A. A.,
-                                                                    Ribeiro, F. M. L., da Silva, E. A. B.,<b>
-                                                                        "Eye Detection Using Ensemble of Weak
-                                                                        Classifiers Based on Correlation
-                                                                        Filter"</b>, <i>International Joint
-                                                                        Conference on Neural Networks (IJCNN)</i>, Rio
-                                                                    de Janeiro, Brazil, July 2018.
-                                                                </li>
-
-                                                                <br>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-NationalConferences"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-NationalConferences">
-                                                                National Conferences
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-NationalConferences"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-
-                                                                <li style="text-align: justify;">
-                                                                    Dias, T. L. B., Meyer, L. S., Passos, W. L.,
-                                                                    da Silva, E. A. B., Netto, S. L.,
-                                                                    <b>"Visualização Panorâmica Georreferenciada de
-                                                                        Focos de Mosquito <i>Aedes aegypti</i>"</b>,
-                                                                    <i>XLIII Simpósio
-                                                                        Brasileiro de Telecomunicações e
-                                                                        Processamento de Sinais,</i> Natal, RN, Brasil,
-                                                                    Outubro 2025.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">
-                                                                    Machado, M. S., Santos, G. F. G., Passos, W. L.,
-                                                                    Gois, J. N., Gouvea, J. A., Zachi, A. R. L.,
-                                                                    <b>"Controle de Orientação pan-tilt de um ponteiro
-                                                                        laser para rastreamento
-                                                                        de objetos móveis por visão computacional"</b>,
-                                                                    <i>XVII Simpósio
-                                                                        Brasileiro de Automação Inteligente,</i> São
-                                                                    João del-Rei, MG, Brasil,
-                                                                    Agosto 2025.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">
-                                                                    Zachi, A. R. L., Albuquerque, P. K., Passos, W. L.,
-                                                                    Campos, G. A. P.,
-                                                                    <b>"Um sistema para estimativa de profundidade de
-                                                                        objetos utilizando visão computacional"</b>,
-                                                                    <i>XVII Simpósio
-                                                                        Brasileiro de Automação Inteligente,</i> São
-                                                                    João del-Rei, MG, Brasil,
-                                                                    Agosto 2025.
-                                                                </li>
-
-                                                                <br>
-
-
-                                                                <li style="text-align: justify;">
-                                                                    de Freitas, P. M., Bueno, K. C. de A.,
-                                                                    Souza, E. A. O., Passos, W. L., Araújo, G. M.,
-                                                                    de Lima, A. A.,
-                                                                    <b>"Acerca do Monitoramento de Áreas de Conservação
-                                                                        Ambiental Utilizando Visão Computacional</b>",
-                                                                    <i>XLII Simpósio
-                                                                        Brasileiro de Telecomunicações e
-                                                                        Processamento de Sinais,</i> Belém, PA, Brasil,
-                                                                    Outubro 2024.
-                                                                </li>
-
-                                                                <br>
-
-
-                                                                <li style="text-align: justify;">
-                                                                    Zebendo, N. H. C., Gois, J. N.,
-                                                                    Gonzalez, D. R. G., Passos, W. L., Araújo, G. M.,
-                                                                    de Lima, A. A., <b>"Predição Automática de Escala de
-                                                                        Avaliação de
-                                                                        Equilíbrio Utilizando Estabilometria</b>",
-                                                                    <i>XLII Simpósio
-                                                                        Brasileiro de Telecomunicações e
-                                                                        Processamento de Sinais,</i> Belém, PA, Brasil,
-                                                                    Outubro 2024.
-                                                                </li>
-
-
-                                                                <br>
-
-
-                                                                <li style="text-align: justify;">
-                                                                    Stefano, G., Passos, W. L., Gois, J. N.,
-                                                                    Araújo, G. M., de Lima, A. A., <b>"Um Sistema de
-                                                                        Reconhecimento de Sinais em Libras Usando CNN e
-                                                                        LSTM</b>",
-                                                                    <i>XXXIX Simpósio
-                                                                        Brasileiro de Telecomunicações e
-                                                                        Processamento de Sinais,</i> Online, Brasil,
-                                                                    Setembro 2021.
-                                                                </li>
-
-                                                                <br>
-
-
-                                                                <li style="text-align: justify;">Rodrigues,
-                                                                    M. P., de Carvalho, B. O., B.,&nbsp;
-                                                                    Passos, W.&nbsp; L., Netto, S. L., da
-                                                                    Silva, E. A. B.,&nbsp; Mendes, M. M., de
-                                                                    Resende Filho, L. W., Vargas, L. V.,
-                                                                    Peixoto, A. J., <b>"Acerca da
-                                                                        Detecção Automática de Silhouetas de
-                                                                        Óleo no Mar</b>", <i>XXXIX Simpósio
-                                                                        Brasileiro de Telecomunicações e
-                                                                        Processamento de Sinais,</i> Online,
-                                                                    Brasil, Setembro 2021.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., da Silva, E. A. B.,&nbsp; Netto,
-                                                                    S. L., Martins, J. B., Costa, Y. B.,
-                                                                    Araújo, G. M., de Lima, A. A., <b>"Detecção de
-                                                                        Potenciais Focos do Aedes aegypti
-                                                                        em Vídeos Aéreos Usando Redes Neurais"</b>,
-                                                                    <i>XXXVIII Simpósio Brasileiro de
-                                                                        Telecomunicações e Processamento de
-                                                                        Sinais</i>, Online, Brasil, Novembro
-                                                                    2020.
-                                                                </li>
-
-                                                                <br>
-
-                                                                <li style="text-align: justify;">Barros,
-                                                                    B., Passos, W. L., Padilla, R., da
-                                                                    Silva, E.&nbsp; A. B., Netto, S. L.,
-                                                                    Araújo, G. M., <b>"Acerca de Técnicas
-                                                                        de Aumento de Dados para a Detecção
-                                                                        Automática de Focos de Mosquito"</b>,
-                                                                    <i>XXXVII Simpósio Brasileiro de
-                                                                        Telecomunicações e Processamento de
-                                                                        Sinais</i>, Petrópolis, Brasil,
-                                                                    Setembro 2019.<br>
-                                                                    <br>
-                                                                </li>
-
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W. L., Dias, T. M., Junior, H. M. A.,
-                                                                    Barros, B., Araújo, G. M., Lima, A. A.,
-                                                                    da Silva, E. A. B., Netto, S. L.,<b>
-                                                                        "Acerca da Detecção Automática de Focos
-                                                                        do Mosquito Aedes aegypti"</b>, <i>XXXVI
-                                                                        Simpósio
-                                                                        Brasileiro de
-                                                                        Telecomunicações e Processamento de
-                                                                        Sinais</i>, Campina
-                                                                    Grande, Brasil, Setembro 2018.
-                                                                </li>
-                                                                <br>
-
-
-
-
-                                                                <li style="text-align: justify;">
-                                                                    Passos, W. L., Quintanilha,
-                                                                    I. M., Araújo, G. M.,
-                                                                    <b>
-                                                                        "Real-Time Deep-Learning-Based System for Facial
-                                                                        Recognition"</b>, <i>XXXVI
-                                                                        Simpósio
-                                                                        Brasileiro de
-                                                                        Telecomunicações e Processamento de
-                                                                        Sinais</i>, Campina
-                                                                    Grande, Brasil, Setembro 2018.
-                                                                </li>
-                                                                <br>
-
-                                                                <li style="text-align: justify;">Passos,
-                                                                    W., Araújo, G. M., Lima, A., Ribeiro, F.
-                                                                    M. L., da Silva, E. A. B.,<b> "Bagging
-                                                                        de Detectores por Produto Interno para
-                                                                        Detecção de Olhos"</b>, <i>XXXV
-                                                                        Simpósio Brasileiro de
-                                                                        Telecomunicações e Processamento de
-                                                                        Sinais</i>, São Pedro,
-                                                                    Brasil, Setembro 2017.
-                                                                </li>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
-
-                                            <section id="students"><br>
-                                                <h3>Students</h3>
-                                                <div class="accordion" id="accordionStudents">
-
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-CurrentStudents"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-CurrentStudents">
-                                                                Current Students
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-CurrentStudents"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li style="text-align: justify;">Renan Henrique Martins
-                                                                    Chagas da Silva, Eng., COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Amaro Azevedo de Lima from CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Letícia Cacho de
-                                                                    Oliveira, Eng., COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Thiago de Moura Prego from CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Matheus Martins
-                                                                    Fia, Eng., COENCA-NI/CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Guilherme Rodrigues da
-                                                                    Silva, Eng., COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    André Salustiano Ramalho from INT and CEFET-RJ .<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Pedro Moreira de
-                                                                    Freitas, Eng., COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Alessandro Rosa Lopes Zachi from CEFET-RJ .<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Enrique Augusto Ortega
-                                                                    de Souza, Eng., COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Amaro Azevedo de Lima from CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Douglas Henrique da
-                                                                    Silva Pinheiro,
-                                                                    Undergraduate Research (Eng.),
-                                                                    COENCA-NI/CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Caio Victor Souza de
-                                                                    Oliveira,
-                                                                    Undergraduate Research (Eng.),
-                                                                    COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Thiago de Moura Prego from CEFET-RJ.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">Breno Silva Moraes
-                                                                    Machado,
-                                                                    Undergraduate Research (Eng.),
-                                                                    COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Thiago de Moura Prego from CEFET-RJ.<br>
-                                                                </li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-UndergraduateStudents"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-UndergraduateStudents">
-                                                                Undergraduate Students Supervised
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-UndergraduateStudents"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li style="text-align: justify;">
-                                                                    Mateus Soares de Oliveira,
-                                                                    <b><a href="https://cefetrjbr-my.sharepoint.com/personal/08211229757_cefet-rj_br/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F08211229757%5Fcefet%2Drj%5Fbr%2FDocuments%2FProjetos%20finais%2FPF%20Engenharia%20Controle%20e%20Automa%C3%A7%C3%A3o%2FProjeto%20Final%20Mateus%20Soares%20de%20Oliveira%2Epdf&parent=%2Fpersonal%2F08211229757%5Fcefet%2Drj%5Fbr%2FDocuments%2FProjetos%20finais%2FPF%20Engenharia%20Controle%20e%20Automa%C3%A7%C3%A3o&ga=1"
-                                                                            target="_blank">"Case Study of a
-                                                                            Safety Instrumented System for a Light Cycle
-                                                                            Oil Plant" (in
-                                                                            Portuguese),</a></b>
-                                                                    Eng.,
-                                                                    COENCA-NI/CEFET-RJ, with
-                                                                    Prof.
-                                                                    Cristiano de S. de Carvalho from CEFET-RJ,
-                                                                    June, 2025.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">
-                                                                    Lucas Silva Meyer,
-                                                                    <b><a href="http://www.repositorio.poli.ufrj.br/monografias/projpoli10046316.pdf"
-                                                                            target="_blank">"Georeferenced Panoramic
-                                                                            View
-                                                                            of
-                                                                            <i>Aedes
-                                                                                aegypti</i> Mosquito
-                                                                            Outbreaks" (in
-                                                                            Portuguese),</a></b>
-                                                                    Eng.,
-                                                                    Poli/UFRJ, with
-                                                                    Prof.
-                                                                    Eduardo A. B. da Silva from Poli/COPPE/UFRJ,
-                                                                    February, 2025.<br>
-                                                                </li>
-                                                                <li style="text-align: justify;">
-                                                                    Pedro Gil
-                                                                    Oliveira de Magalhães Couto,
-                                                                    <b><a href="http://www.repositorio.poli.ufrj.br/monografias/monopoli10032631.pdf"
-                                                                            target="_blank">"Data Augmentation in
-                                                                            Digital Image Processing to Aid the
-                                                                            Detection of
-                                                                            <i>Aedes
-                                                                                aegypti</i> Outbreaks" (in
-                                                                            Portuguese),</a></b>
-                                                                    Eng.,
-                                                                    Poli/UFRJ, with
-                                                                    Prof.
-                                                                    Eduardo A. B. da Silva from Poli/COPPE/UFRJ,
-                                                                    February, 2021.<br>
-                                                                </li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-
-                                                    <!-- <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-DoctoralStudents"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-DoctoralStudents">
-                                                                Doctoral Students Supervised
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-DoctoralStudents"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li>Student #1</li>
-                                                                <li>Student #2</li>
-                                                                <li>Student #3</li>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-MasterStudents"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-MasterStudents">
-                                                                Masters Students Supervised
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-MasterStudents"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li>Student #1</li>
-                                                                <li>Student #2</li>
-                                                                <li>Student #3</li>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-
-
-
-
-
-
-
-
-
-
-                                                </div>
-
-
-
-
-
-
-
-
-
-
-
-                                                <section id="teaching"><br>
-                                                    <h3>Teaching</h3>
-                                                    <div class="accordion" id="accordionTeaching">
-
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header">
-                                                                <button class="accordion-button" type="button"
-                                                                    data-bs-toggle="collapse"
-                                                                    data-bs-target="#panel-UndergraduateCourses"
-                                                                    aria-expanded="true"
-                                                                    aria-controls="panel-UndergraduateCourses">
-                                                                    Undergraduate Courses
-                                                                </button>
-                                                            </h2>
-                                                            <div id="panel-UndergraduateCourses"
-                                                                class="accordion-collapse collapse show">
-                                                                <div class="accordion-body">
-                                                                    <li>Digital Signal Processing</li>
-                                                                    <li>Digital Systems</li>
-                                                                    <li>Electric Circuits</li>
-                                                                    <li>Electronic Instrumentation and Measurements</li>
-                                                                    <li>Introduction to Control Systems and Automation
-                                                                        Engineering</li>
-                                                                    <li>Topics in Electronic and Digital Systems</li>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-
-                                                        <!-- <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button" type="button"
-                                                                data-bs-toggle="collapse"
-                                                                data-bs-target="#panel-GraduateCourses"
-                                                                aria-expanded="true"
-                                                                aria-controls="panel-GraduateCourses">
-                                                                Graduate Courses
-                                                            </button>
-                                                        </h2>
-                                                        <div id="panel-GraduateCourses"
-                                                            class="accordion-collapse collapse show">
-                                                            <div class="accordion-body">
-                                                                <li>Course #1</li>
-                                                                <li>Course #2</li>
-                                                                <li>Course #3</li>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                    </div>
-
-
-
-                                                </section>
-
-                                        </div>
-                                    </div>
+                <div class="acc-group">
+                    <div class="acc is-open">
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-experience" aria-expanded="true"
+                                aria-controls="p-experience">
+                                <span class="acc__label">Positions</span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-experience" role="region" aria-labelledby="t-experience">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Professor</span>, <span class="topic">Postgraduate Program in
+                                            Electrical Engineering, CEFET-RJ</span>, <span class="what">Jan. 2025 –
+                                            present</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Professor</span>, <span class="topic">Department of Control
+                                            Systems and Automation Engineering, CEFET-RJ</span>, <span class="what">Jan.
+                                            2024 – present</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Postdoctoral researcher</span>, <span class="topic">Systems
+                                            and Computer Engineering Program (PESC), COPPE/UFRJ</span>, <span
+                                            class="what">Dec. 2024 – present</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Researcher</span>, <span class="topic">Signals, Multimedia and
+                                            Telecommunications Laboratory (SMT), COPPE/UFRJ</span>, <span
+                                            class="what">Feb. 2017 – Oct. 2024</span>
+                                    </li>
+                                    <!-- <li>
+                                        <span class="who">Intern</span>, <span class="topic">Raízen Combustíveis</span>, <span class="what">2016</span>
+                                    </li> -->
+                                    <li>
+                                        <span class="who">Research assistant</span>, <span class="topic">Illinois
+                                            Institute of Technology, Chicago, USA</span>, <span class="what">2015 ·
+                                            Integration of a GPS module and an IMU in a low-cost embedded system for
+                                            sub-metre localisation</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Instrumentation and Automation Designer</span>, <span
+                                            class="topic">Promon Engenharia</span>, <span class="what">2011–2015 ·
+                                            Detailed design documents for the oil and gas industry: instrument layouts,
+                                            interconnection and logic diagrams, flowcharts</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Instrumentation and Automation Intern</span>, <span
+                                            class="topic">Promon Engenharia</span>, <span class="what">2010–2011 ·
+                                            Support to the instrumentation team in detailed design documentation</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---------- Research ---------- -->
+            <section class="section" id="research">
+                <div class="section__head">
+                    <span class="section__eyebrow">What I work on</span>
+                    <h2 class="section__title">Research</h2>
+                </div>
+
+                <div class="acc-group">
+                    <div class="acc is-open">
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-areas" aria-expanded="true"
+                                aria-controls="p-areas">
+                                <span class="acc__label">Research Areas</span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-areas" role="region" aria-labelledby="t-areas">
+                            <div class="acc__inner">
+                                <div class="tags">
+                                    <span class="tag">Digital Signal Processing</span>
+                                    <span class="tag">Digital Image Processing</span>
+                                    <span class="tag">Computer Vision</span>
+                                    <span class="tag">Machine Learning</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-projects" aria-expanded="true"
+                                aria-controls="p-projects">
+                                <span class="acc__label">Research Projects</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-projects" role="region" aria-labelledby="t-projects">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Brasil 6G, Phase 3 — Research and Development in
+                                            6th-Generation Mobile Communication Systems</span>, <span
+                                            class="what">2024–present · Team member · Coordinator: José F. de Rezende
+                                            (UFRJ) · MCTI/RNP</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Computational System for Non-Intrusive Estimation of
+                                            Biomedical Signals through Computer Vision</span>, <span
+                                            class="what">2026–present · Principal investigator · CEFET-RJ research and
+                                            innovation call (DEPEQ)</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Computer Vision and Signal Processing for Non-Intrusive
+                                            Monitoring of Biomedical Signals</span>, <span class="what">2024–2026 ·
+                                            Principal investigator · CEFET-RJ research and
+                                            innovation call (DEPEQ)</span>
+                                    </li>
+                                    <!-- <li>
+                                        <span class="who">Automated Postural Assessment System for Physical Exercise
+                                            with Computer Vision</span>, <span class="what">2025–present · Principal
+                                            investigator · CEFET-RJ</span>
+                                    </li> -->
+                                    <!-- <li>
+                                        <span class="who">Blood Pressure Estimation System with Imaging
+                                            Photoplethysmography and Machine Learning</span>, <span
+                                            class="what">2025–present · Principal investigator · CEFET-RJ</span> -->
+                                    <!-- </li> -->
+                                    <!-- <li>
+                                        <span class="who">Non-Invasive Blood Pressure Monitoring System Using Imaging
+                                            Photoplethysmography and Machine Learning</span>, <span
+                                            class="what">2024–2025 · Principal investigator · CEFET-RJ</span>
+                                    </li> -->
+                                    <li>
+                                        <span class="who">Autonomous Robot for Identification of Emulsified Liquids
+                                            (ARIEL), Phase 2</span>, <span class="what">2022–2023 · Team member ·
+                                            Coordinator: Sergio L. Netto (UFRJ) · Repsol/Sinopec</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Evaluation of Multiphase Flow and Fluid Correlations Using
+                                            Computational Intelligence Techniques</span>, <span class="what">2021–2022 ·
+                                            Team member · Coordinator: Sergio L. Netto (UFRJ) · Petrobras</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Automatic Detection of <i>Aedes aegypti</i> Breeding Grounds
+                                            using Computer Vision and Machine Learning</span>, <span
+                                            class="what">2019–2021 · Team member · Coordinator: Eduardo A. B. da Silva
+                                            (UFRJ) · Google Latin America Research Awards</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Signal Processing Applied to Prediction, Detection, and
+                                            Diagnosis of Failures During Well Drilling</span>, <span
+                                            class="what">2018–2020 · Team member · Coordinator: Marcello L. R. de Campos
+                                            (UFRJ) · CENPES/Petrobras</span>
+                                    </li>
+                                    <!-- <li>
+                                        <span class="who">Facial Feature Detection and Tracking Using Ensemble-Based Methods</span>, <span class="what">2016–2017 · Team member · Coordinator: Gabriel M. Araujo (CEFET-RJ)</span>
+                                    </li> -->
+                                    <!-- <li>
+                                        <span class="who">Integration of a GPS Module and an IMU in a Low-Cost Embedded System</span>, <span class="what">2015 · Team member · Coordinator: Samer M. Khanafseh (Illinois Institute of Technology)</span>
+                                    </li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-extension" aria-expanded="true"
+                                aria-controls="p-extension">
+                                <span class="acc__label">University Extension Projects</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-extension" role="region" aria-labelledby="t-extension">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Postural Assessment in Physical Exercise Using Computer
+                                            Vision: Promoting Health and Well-Being in the Community</span>, <span
+                                            class="what">2026–present · Coordinator · CEFET-RJ</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Georeferenced Visualization of Potential <i>Aedes aegypti</i>
+                                            Breeding Grounds to Support Health Agents</span>, <span
+                                            class="what">2026–present · Coordinator · CEFET-RJ</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">From Concept to Practice: Interactive Teaching of Capital
+                                            Market Analysis with AI Models</span>, <span class="what">2025 · Team member
+                                            · Coordinator: Jonathan N. Gois (CEFET-RJ)</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Postural Assessment in Physical Exercise Using Computer
+                                            Vision: Promoting Health in the Community</span>, <span class="what">2025 ·
+                                            Coordinator · CEFET-RJ</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Portable Insulin Storage and Temperature Monitoring
+                                            Prototype</span>, <span class="what">2024 · Team member · Coordinator: Amaro
+                                            A. de Lima (CEFET-RJ)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- ---------- Publications ---------- -->
+            <section class="section" id="publications">
+                <div class="section__head">
+                    <span class="section__eyebrow">Peer-reviewed work</span>
+                    <h2 class="section__title">Publications</h2>
+                </div>
 
+                <div class="acc-group">
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-journals" aria-expanded="true"
+                                aria-controls="p-journals">
+                                <span class="acc__label">Journal Papers</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-journals" role="region" aria-labelledby="t-journals">
+                            <div class="acc__inner">
+                                <ul class="pubs">
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Silva, J. P. N. Q., Araujo, G. M., <span
+                                                class="me">Passos, W. L.</span>, Barreto, P. S., Santos, T. M. B.,
+                                            Pinto, M. F.</span>,
+                                        <span class="pub__title">&ldquo;Improving Robotic UAV Wind-Turbine Inspection
+                                            with Digital-Twin Synthetic Data&rdquo;</span>,
+                                        <span class="pub__venue"><i>Journal of Control, Automation and Electrical
+                                                Systems</i>, July 2026.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1007/s40313-026-01312-7"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1007/s40313-026-01312-7</a>, ISSN: 2195-3880 / 2195-3899.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Gois, J. N., <span class="me">Passos, W. L.</span>,
+                                            da Silva, M. W. R., de Rezende, J. F., Barbosa, V. C.</span>,
+                                        <span class="pub__title">&ldquo;Unsupervised Dynamic Cooperation Clustering in
+                                            Cell-Free Massive MIMO With Multiple CPUs&rdquo;</span>,
+                                        <span class="pub__venue"><i>IEEE Wireless Communications Letters</i>, vol. 15,
+                                            pp. 3601–3605, 2026.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1109/LWC.2026.3701874"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1109/LWC.2026.3701874</a>, ISSN: 2162-2337 / 2162-2345.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Lima, T. G. L., <span class="me">Passos, W.
+                                                L.</span></span>,
+                                        <span class="pub__title">&ldquo;When decentralization is not enough: Federated
+                                            Learning and the institutional, infrastructural, and regulatory conditions
+                                            for AI governance in Brazil&rdquo;</span>,
+                                        <span class="pub__venue"><i>Computer Law &amp; Security Review</i>, vol. 60,
+                                            106277, April 2026.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1016/j.clsr.2026.106277"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1016/j.clsr.2026.106277</a>, ISSN: 2212-473X.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Tavares, L. G. C., <span class="me">Passos, W.
+                                                L.</span>, Martins, B. C., Rodrigues, M. de P., da Silva, E. A. B.,
+                                            Netto, S. L.</span>,
+                                        <span class="pub__title">&ldquo;Pixel-level detection and classification of
+                                            marine oil spills in aerial imagery with annotation uncertainty
+                                            handling&rdquo;</span>,
+                                        <span class="pub__venue"><i>Marine Pollution Bulletin</i>, vol. 223, 118975,
+                                            February 2026.</span>
+                                        <span class="pub__meta"><a
+                                                href="https://doi.org/10.1016/j.marpolbul.2025.118975" target="_blank"
+                                                rel="noopener noreferrer">DOI: 10.1016/j.marpolbul.2025.118975</a>,
+                                            ISSN: 0025-326X.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Zebendo, N. H. C., Gois, J. N., Gonzalez, D. R. G.,
+                                            <span class="me">Passos, W. L.</span>, Araujo, G. M., de Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;The usage of stabilometric information to
+                                            automatically predict balance evaluation scores&rdquo;</span>,
+                                        <span class="pub__venue"><i>Learning &amp; Nonlinear Models</i>, vol. 23 no. 2,
+                                            pp. 4–10, September 2025.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.21528/lnlm-vol23-no2-art1"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.21528/lnlm-vol23-no2-art1</a>, ISSN: 1676-2789.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Barreto, C.
+                                            S., Araujo, G. M., Haque, U., Netto, S. L., da Silva, E. A. B.</span>,
+                                        <span class="pub__title">&ldquo;Toward improved surveillance of <i>Aedes
+                                                aegypti</i> breeding grounds through artificially augmented
+                                            data&rdquo;</span>,
+                                        <span class="pub__venue"><i>Engineering Applications of Artificial
+                                                Intelligence</i>, vol. 123, Part C, August 2023.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1016/j.engappai.2023.106488"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1016/j.engappai.2023.106488</a>, ISSN: 0952-1976.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Araújo, G. M.,
+                                            de Lima, A. A., Netto, S. L., da Silva, E. A. B.</span>,
+                                        <span class="pub__title">&ldquo;Automatic detection of <i>Aedes aegypti</i>
+                                            breeding grounds based on deep networks with spatio-temporal
+                                            consistency&rdquo;</span>,
+                                        <span class="pub__venue"><i>Computers, Environment and Urban Systems</i>, vol.
+                                            93, 101754, April 2022.</span>
+                                        <span class="pub__meta"><a
+                                                href="https://doi.org/10.1016/j.compenvurbsys.2021.101754"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1016/j.compenvurbsys.2021.101754</a>, ISSN: 0198-9715.</span>
+                                    </li>
 
-                </section>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Araujo, G. M.,
+                                            Gois, J. N., de Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;A Gait Energy Image-Based System for Brazilian
+                                            Sign Language Recognition&rdquo;</span>,
+                                        <span class="pub__venue"><i>IEEE Transactions on Circuits and Systems I: Regular
+                                                Papers</i>, vol. 68 no. 11, pp. 4761–4771, November 2021.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1109/TCSI.2021.3091001"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1109/TCSI.2021.3091001</a>, ISSN: 1549-8328 / 1558-0806.</span>
+                                    </li>
 
-            </main>
+                                    <li class="pub">
+                                        <span class="pub__authors">Cinelli, L. P., de Oliveira, J. F. L., de Pinho, V.,
+                                            <span class="me">Passos, W. L.</span>, Padilla, R., Braz, P., Galves, B.,
+                                            Dalvi, D., Lewenfus, G., Ferreira, J., Ji, A., de Oliveira, F., Gonçalves,
+                                            C., Netto, S. L., da Silva, E. A. B., de Campos, M. L. R.</span>,
+                                        <span class="pub__title">&ldquo;Automatic Event Identification and Extraction
+                                            from Daily Drilling Reports Using an Expert System and Artificial
+                                            Intelligence&rdquo;</span>,
+                                        <span class="pub__venue"><i>Journal of Petroleum Science and Engineering</i>,
+                                            vol. 205, 108939, October 2021.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1016/j.petrol.2021.108939"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1016/j.petrol.2021.108939</a>, ISSN: 0920-4105.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors">Padilla, R., <span class="me">Passos, W. L.</span>,
+                                            Dias, T. L. B., Netto, S. L., da Silva, E. A. B.</span>,
+                                        <span class="pub__title">&ldquo;A Comparative Analysis of Object Detection
+                                            Metrics with a Companion Open-Source Toolkit&rdquo;</span>,
+                                        <span class="pub__venue"><i>Electronics, Special Issue on Deep Learning Based
+                                                Object Detection</i>, vol. 10 no. 3, 279, pp. 1–28, January 2021.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.3390/electronics10030279"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.3390/electronics10030279</a>, ISSN: 2079-9292.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-conferences" aria-expanded="true"
+                                aria-controls="p-conferences">
+                                <span class="acc__label">Conference Papers</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-conferences" role="region" aria-labelledby="t-conferences">
+                            <div class="acc__inner">
+                                <ul class="pubs">
+                                    <!-- Accepted for presentation; the proceedings are not out yet, so these
+                                     carry no DOI. Uncomment each one once it is published.
+                                    <li class="pub">
+                                        <span class="pub__authors">Gois, J. N., Pinheiro, M. S., <span class="me">Passos, W. L.</span>, Araujo, G. M., Henriques, F. R., Zachi, A. R. L., Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;Classificação de Sinais Isolados em Libras com Descritores Cinemáticos e Gait Energy Image&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLIV Simpósio Brasileiro de Telecomunicações e Processamento de Sinais</i>, Salvador, BA, Brasil, 2026.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Gois, J. N., Rezende, J. F.</span>,
+                                        <span class="pub__title">&ldquo;Localização 3D de Equipamentos de Usuário via Fusão Multimodal Rádio-Visual em Redes mmWave&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLIV Simpósio Brasileiro de Telecomunicações e Processamento de Sinais</i>, Salvador, BA, Brasil, 2026.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Rabelo, D. S., Gois, J. N., Lima, A. A., <span class="me">Passos, W. L.</span>, Araujo, G. M.</span>,
+                                        <span class="pub__title">&ldquo;Detecção de Ativos em Redes de Distribuição Elétrica com Imagens Veiculares Georreferenciadas&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLIV Simpósio Brasileiro de Telecomunicações e Processamento de Sinais</i>, Salvador, BA, Brasil, 2026.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Mendes Junior, M. N., Andrade, F. A. A., <span class="me">Passos, W. L.</span>, Gois, J. N., Lima, A. A., Araujo, G. M.</span>,
+                                        <span class="pub__title">&ldquo;Detecção de Keyframes de Publicidade Picture-in-Picture em Vídeos de Partidas de Futebol&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLIV Simpósio Brasileiro de Telecomunicações e Processamento de Sinais</i>, Salvador, BA, Brasil, 2026.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Silva, J. P. N. Q., Paiva, J. K. L., Torres, M. S. G., <span class="me">Passos, W. L.</span>, Araujo, G. M., Pinto, M. F.</span>,
+                                        <span class="pub__title">&ldquo;Detecção Automática de Danos em Pás de Turbinas Eólicas Offshore Assistida por VANT e Deep Learning&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXVI Congresso Brasileiro de Automática</i>, São Paulo, SP, Brasil, 2026.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Melo, C. L. A., Oliveira Junior, J. L., Pedrosa, P. P., Correia, C. A. M., Vidal Filho, W. B., <span class="me">Passos, W. L.</span>, Gouvea, J. A., Zachi, A. R. L.</span>,
+                                        <span class="pub__title">&ldquo;Método ADRC com Planta Modificada e Rejeição de Distúrbios Acentuada&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXVI Congresso Brasileiro de Automática</i>, São Paulo, SP, Brasil, 2026.</span>
+                                    </li>
+                                -->
+                                    <li class="pub">
+                                        <span class="pub__authors">Dias, T. L. B., Meyer, L. S., <span
+                                                class="me">Passos, W. L.</span>, da Silva, E. A. B., Netto, S.
+                                            L.</span>,
+                                        <span class="pub__title">&ldquo;Visualização Panorâmica Georreferenciada de
+                                            Potenciais Focos de Mosquito <i>Aedes aegypti</i>&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLIII Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Natal, RN, Brasil, Outubro 2025.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2025.1571151687"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2025.1571151687</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Machado, M. S., Santos, G. F. G., <span
+                                                class="me">Passos, W. L.</span>, Gois, J. N., Gouvea, J. A., Zachi, A.
+                                            R. L.</span>,
+                                        <span class="pub__title">&ldquo;Controle de Orientação pan-tilt de um ponteiro
+                                            laser para rastreamento de objetos móveis por visão
+                                            computacional&rdquo;</span>,
+                                        <span class="pub__venue"><i>XVII Simpósio Brasileiro de Automação
+                                                Inteligente</i>, São João del-Rei, MG, Brasil, Agosto 2025.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.29327/1842969.1-473"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.29327/1842969.1-473</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Zachi, A. R. L., Albuquerque, P. K., <span
+                                                class="me">Passos, W. L.</span>, Campos, G. A. P.</span>,
+                                        <span class="pub__title">&ldquo;Um sistema para estimativa de profundidade de
+                                            objetos utilizando visão computacional&rdquo;</span>,
+                                        <span class="pub__venue"><i>XVII Simpósio Brasileiro de Automação
+                                                Inteligente</i>, São João del-Rei, MG, Brasil, Agosto 2025.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.29327/1842969.1-534"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.29327/1842969.1-534</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">de Freitas, P. M., Bueno, K. C. de A., Souza, E. A.
+                                            O., <span class="me">Passos, W. L.</span>, Araújo, G. M., de Lima, A.
+                                            A.</span>,
+                                        <span class="pub__title">&ldquo;Acerca do Monitoramento de Áreas de Conservação
+                                            Ambiental Utilizando Visão Computacional&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLII Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Belém, PA, Brasil, Outubro 2024.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2024.1571036887"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2024.1571036887</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Zebendo, N. H. C., Gois, J. N., Gonzalez, D. R. G.,
+                                            <span class="me">Passos, W. L.</span>, Araújo, G. M., de Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;Predição Automática de Escala de Avaliação de
+                                            Equilíbrio Utilizando Estabilometria&rdquo;</span>,
+                                        <span class="pub__venue"><i>XLII Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Belém, PA, Brasil, Outubro 2024.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2024.1571036706"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2024.1571036706</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Araújo, G. M.,
+                                            Haque, U., Cruz-Roldán, F., Netto, S. L.</span>,
+                                        <span class="pub__title">&ldquo;IEEE ICIP 2023 Challenge on the Automatic
+                                            Detection of Mosquito Breeding Grounds&rdquo;</span>,
+                                        <span class="pub__venue"><i>International Conference on Image Processing
+                                                Challenges and Workshops (ICIPCW)</i>, pp. 3624–3628, Kuala Lumpur,
+                                            Malaysia, October 2023.</span>
+                                        <span class="pub__meta"><a
+                                                href="https://doi.org/10.1109/ICIPC59416.2023.10328377" target="_blank"
+                                                rel="noopener noreferrer">DOI:
+                                                10.1109/ICIPC59416.2023.10328377</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Araújo, G. M.,
+                                            Gois, J. N., Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;A Brazilian Sign Language Gesture Recognizing
+                                            System Using Gait Energy Image&rdquo;</span>,
+                                        <span class="pub__venue"><i>Latin America Symposium on Circuits and System
+                                                (LASCAS)</i>, Arequipa, Peru, February 2021.</span>
+                                        <span class="pub__meta"><a
+                                                href="https://doi.org/10.1109/LASCAS51355.2021.9459169" target="_blank"
+                                                rel="noopener noreferrer">DOI:
+                                                10.1109/LASCAS51355.2021.9459169</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Stefano, G., <span class="me">Passos, W. L.</span>,
+                                            Gois, J. N., Araújo, G. M., de Lima, A. A.</span>,
+                                        <span class="pub__title">&ldquo;Um Sistema de Reconhecimento de Sinais em Libras
+                                            Usando CNN e LSTM&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXIX Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Online, Brasil, Setembro 2021.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2021.1570727292"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2021.1570727292</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Rodrigues, M. P., de Carvalho, B. O. B., <span
+                                                class="me">Passos, W. L.</span>, Netto, S. L., da Silva, E. A. B.,
+                                            Mendes, M. M., de Resende Filho, L. W., Vargas, L. V., Peixoto, A.
+                                            J.</span>,
+                                        <span class="pub__title">&ldquo;Acerca da Detecção Automática de Silhuetas de
+                                            Manchas de Óleo no Mar&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXIX Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Online, Brasil, Setembro 2021.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2021.1570726912"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2021.1570726912</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Gameiro, P. V., <span class="me">Passos, W.
+                                                L.</span>, Araújo, G. M., Lima, A. A., Gois, J. N., Corbo, A. R.</span>,
+                                        <span class="pub__title">&ldquo;A Brazilian Sign Language Video Database for
+                                            Automatic Recognition&rdquo;</span>,
+                                        <span class="pub__venue"><i>Latin American Robotics Symposium (LARS)</i>, Natal,
+                                            Brazil, November 2020.</span>
+                                        <span class="pub__meta"><a
+                                                href="https://doi.org/10.1109/LARS/SBR/WRE51543.2020.9307017"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1109/LARS/SBR/WRE51543.2020.9307017</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, da Silva, E.
+                                            A. B., Netto, S. L., Martins, J. B., Costa, Y. B., Araújo, G. M., de Lima,
+                                            A. A.</span>,
+                                        <span class="pub__title">&ldquo;Detecção de Potenciais Focos do <i>Aedes
+                                                aegypti</i> em Vídeos Aéreos Usando Redes Neurais&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXVIII Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Online, Brasil, Novembro 2020.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2020.1570661555"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2020.1570661555</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors">Barros, B., <span class="me">Passos, W. L.</span>,
+                                            Padilla, R., da Silva, E. A. B., Netto, S. L., Araújo, G. M.</span>,
+                                        <span class="pub__title">&ldquo;Acerca de Técnicas de Aumento de Dados para a
+                                            Detecção Automática de Focos de Mosquito&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXVII Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Petrópolis, Brasil, Setembro 2019.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2019.1570556726"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2019.1570556726</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Araújo, G. M.,
+                                            Lima, A. A., Ribeiro, F. M. L., da Silva, E. A. B.</span>,
+                                        <span class="pub__title">&ldquo;Eye Detection Using Ensemble of Weak Classifiers
+                                            Based on Correlation Filter&rdquo;</span>,
+                                        <span class="pub__venue"><i>International Joint Conference on Neural Networks
+                                                (IJCNN)</i>, Rio de Janeiro, Brazil, July 2018.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.1109/IJCNN.2018.8489195"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.1109/IJCNN.2018.8489195</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Dias, T. M.,
+                                            Junior, H. M. A., Barros, B., Araújo, G. M., Lima, A. A., da Silva, E. A.
+                                            B., Netto, S. L.</span>,
+                                        <span class="pub__title">&ldquo;Acerca da Detecção Automática de Focos do
+                                            Mosquito <i>Aedes aegypti</i>&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXVI Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Campina Grande, Brasil, Setembro
+                                            2018.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2018.51"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2018.51</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span>, Quintanilha,
+                                            I. M., Araújo, G. M.</span>,
+                                        <span class="pub__title">&ldquo;Real-Time Deep-Learning-Based System for Facial
+                                            Recognition&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXVI Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, Campina Grande, Brasil, Setembro
+                                            2018.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2018.321"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2018.321</a>.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W.</span>, Araújo, G. M.,
+                                            Lima, A., Ribeiro, F. M. L., da Silva, E. A. B.</span>,
+                                        <span class="pub__title">&ldquo;Bagging de Detectores por Produto Interno para
+                                            Detecção de Olhos&rdquo;</span>,
+                                        <span class="pub__venue"><i>XXXV Simpósio Brasileiro de Telecomunicações e
+                                                Processamento de Sinais</i>, São Pedro, Brasil, Setembro 2017.</span>
+                                        <span class="pub__meta"><a href="https://doi.org/10.14209/sbrt.2017.53"
+                                                target="_blank" rel="noopener noreferrer">DOI:
+                                                10.14209/sbrt.2017.53</a>.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-theses" aria-expanded="true"
+                                aria-controls="p-theses">
+                                <span class="acc__label">Theses</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-theses" role="region" aria-labelledby="t-theses">
+                            <div class="acc__inner">
+                                <ul class="pubs">
 
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span></span>,
+                                        <span class="pub__title">&ldquo;<a
+                                                href="https://w1files.solucaoatrio.net.br/atrio/ufrj-pee_upl//THESIS/10004445/20241104_dsc_thesis_wlpassos_final_20241104154148344.pdf"
+                                                target="_blank" rel="noopener noreferrer">Automatic Detection of
+                                                Potential <i>Aedes aegypti</i> Breeding Grounds using Computer Vision
+                                                and Machine Learning</a>&rdquo;</span>,
+                                        <span class="pub__venue">D.Sc. Thesis, COPPE/Federal University of Rio de
+                                            Janeiro (UFRJ), Rio de Janeiro, RJ, Brazil, October 2024.</span>
+                                    </li>
 
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span></span>,
+                                        <span class="pub__title">&ldquo;<a
+                                                href="https://w1files.solucaoatrio.net.br/atrio/ufrj-pee_upl//THESIS/10001933/thesis_wesley_lobato_20250725101023592.pdf"
+                                                target="_blank" rel="noopener noreferrer">Automatic <i>Aedes aegypti</i>
+                                                Breeding Grounds Detection Using Computer Vision
+                                                Techniques</a>&rdquo;</span>,
+                                        <span class="pub__venue">M.Sc. Dissertation, COPPE/Federal University of Rio de
+                                            Janeiro (UFRJ), Rio de Janeiro, RJ, Brazil, February 2019.</span>
+                                    </li>
+                                    <li class="pub">
+                                        <span class="pub__authors"><span class="me">Passos, W. L.</span></span>,
+                                        <span class="pub__title">&ldquo;Detecção de características faciais utilizando
+                                            Bootstrap Aggregating e o detector por produto interno&rdquo;</span>,
+                                        <span class="pub__venue">B.Sc. Final Project, Federal Center for Technological
+                                            Education (CEFET-RJ), Nova Iguaçu, RJ, Brazil, 2016.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-software" aria-expanded="true"
+                                aria-controls="p-software">
+                                <span class="acc__label">Software Registration</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-software" role="region" aria-labelledby="t-software">
+                            <div class="acc__inner">
+                                <ul class="pubs">
+                                    <li class="pub">
+                                        <span class="pub__authors">Lewenfus, G., de Pinho, V. M., de Campos, M. L. R.,
+                                            Netto, S. L., de Oliveira, J. F. L., <span class="me">Passos, W. L.</span>,
+                                            de Oliveira, F. L., da Silva, E. A. B., Dalvi, D. P., Padilla, R., Cinelli,
+                                            L. P.</span>,
+                                        <span class="pub__title">&ldquo;FARME&rdquo;</span>,
+                                        <span class="pub__venue">Computer program registration, National Institute of
+                                            Industrial Property (INPI), Brazil. Registered 21 August 2020.</span>
+                                        <span class="pub__meta">Registration no. BR512021002855-4.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---------- Awards ---------- -->
+            <section class="section" id="awards">
+                <div class="section__head">
+                    <span class="section__eyebrow">Recognition</span>
+                    <h2 class="section__title">Awards</h2>
+                </div>
+
+                <div class="acc-group">
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-awards" aria-expanded="true"
+                                aria-controls="p-awards">
+                                <span class="acc__label">Distinctions</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-awards" role="region" aria-labelledby="t-awards">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Google Latin America Research Award (LARA)</span>, <span
+                                            class="topic">“Automatic Detection of <i>Aedes aegypti</i> Breeding Grounds
+                                            using Computer Vision and Machine Learning”</span>, <span class="what">2019
+                                            and 2020 · Google</span>
+                                        <a class="pub-link"
+                                            href="https://research.google/programs-and-events/past-programs/latin-america-research-awards/"
+                                            target="_blank" rel="noopener noreferrer">Awardee list — Google Research</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---------- Students ---------- -->
+            <section class="section" id="students">
+                <div class="section__head">
+                    <span class="section__eyebrow">Supervision</span>
+                    <h2 class="section__title">Students</h2>
+                </div>
+
+                <div class="acc-group">
+
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-current" aria-expanded="true"
+                                aria-controls="p-current">
+                                <span class="acc__label">Current Students</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-current" role="region" aria-labelledby="t-current">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Miqueas dos Santos Pinheiro</span>, <span
+                                            class="topic">“Automatic Classification of Brazilian Sign Language Signs
+                                            with Computer Vision”</span>, <span class="what">M.Sc., PPEEL/CEFET-RJ,
+                                            co-supervisor with Prof. Gabriel Matos Araujo from CEFET-RJ. Since
+                                            2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Leilson Soares Castilhos</span>, <span
+                                            class="topic">“Development of an Autonomous Surface Vessel for Detection,
+                                            Classification and Collection of Floating Solid Waste”</span>, <span
+                                            class="what">M.Sc., PPEEL/CEFET-RJ, co-supervisor with Prof. Alessandro
+                                            Zachi from CEFET-RJ. Since 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Dicson Soares Rabelo</span>, <span class="topic">“Detection of
+                                            Power Sector Assets Using Computer Vision”</span>, <span class="what">M.Sc.,
+                                            PPEEL/CEFET-RJ, co-supervisor with Prof. Gabriel Matos Araujo from CEFET-RJ.
+                                            CAPES. Since 2025.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Lucas Friederichs Osternack Costa</span>, <span
+                                            class="topic">“Pan-Tilt Camera Orientation Control for Target Tracking Using
+                                            Phase Correlation”</span>, <span class="what">Eng.,
+                                            COENCA-NI/CEFET-RJ. Since 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Letícia Cacho de Oliveira</span>, <span
+                                            class="topic">“Automated System for Monitoring Domestic Animal
+                                            Behaviour”</span>, <span class="what">Eng., COENCA-NI/CEFET-RJ,
+                                            with Prof. Thiago de Moura Prego from CEFET-RJ. Since 2025.</span>
+                                    </li>
+                                    <!-- <li>
+                                        <span class="who">Enrique Augusto Ortega de Souza</span>, <span class="topic">“Access Control Prototype Using Computer Vision”</span>, <span class="what">Eng., COENCA-NI/CEFET-RJ, with Prof. Amaro Azevedo de Lima from CEFET-RJ. Since 2025.</span>
+                                    </li> -->
+                                    <li>
+                                        <span class="who">Guilherme Rodrigues da Silva</span>, <span
+                                            class="topic">“Computer Vision and Edge AI on a Raspberry Pi for Automatic
+                                            Reading of Analogue and Digital Instruments”</span>, <span
+                                            class="what">Eng., COENCA-NI/CEFET-RJ, with Prof. André Salustiano
+                                            Ramalho from INT and CEFET-RJ. Since 2025.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acc is-open" data-count>
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-done-tcc" aria-expanded="true"
+                                aria-controls="p-done-tcc">
+                                <span class="acc__label">Undergraduate Students Supervised</span>
+                                <span class="acc__count" data-count-slot></span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-done-tcc" role="region" aria-labelledby="t-done-tcc">
+                            <div class="acc__inner">
+                                <ul class="people">
+                                    <li>
+                                        <span class="who">Pedro Moreira de Freitas</span>, <span
+                                            class="topic">“Development of an Autonomous Vessel for Floating Object
+                                            Detection Using Computer Vision” (in Portuguese)</span>, <span
+                                            class="what">Eng., COENCA-NI/CEFET-RJ, with Prof. Alessandro Rosa Lopes
+                                            Zachi from CEFET-RJ, July, 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Renan Henrique Martins Chagas da Silva</span>, <span
+                                            class="topic">“Quality Assessment of Preventive Maintenance in an LPG
+                                            Facility through Computer Vision” (in Portuguese)</span>, <span
+                                            class="what">Eng., COENCA-NI/CEFET-RJ, with Prof. Amaro Azevedo de Lima from
+                                            CEFET-RJ, July, 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Matheus Martins Fia</span>, <span class="topic">“Video
+                                            Monitoring System for Driver Drowsiness Detection Using Learning Methods”
+                                            (in Portuguese)</span>, <span class="what">Eng., COENCA-NI/CEFET-RJ,
+                                            June, 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Bruno Pimenta Gomes</span>, <span class="topic">“Exploratory
+                                            Study of the Greenblatt Formula in the Brazilian Capital Market” (in
+                                            Portuguese)</span>, <span class="what">Eng., COENCA-NI/CEFET-RJ,
+                                            March, 2026.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Lucas Silva Meyer</span>, <span class="topic"><a
+                                                href="http://www.repositorio.poli.ufrj.br/monografias/projpoli10046316.pdf"
+                                                target="_blank" rel="noopener noreferrer">“Georeferenced Panoramic View
+                                                of <i>Aedes aegypti</i> Mosquito Outbreaks” (in Portuguese)</a></span>,
+                                        <span class="what">Eng., Poli/UFRJ, with Prof. Eduardo A. B. da Silva from
+                                            Poli/COPPE/UFRJ, February 2025.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Mateus Soares de Oliveira</span>, <span class="topic"><a
+                                                href="https://cefetrjbr-my.sharepoint.com/personal/08211229757_cefet-rj_br/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F08211229757%5Fcefet%2Drj%5Fbr%2FDocuments%2FProjetos%20finais%2FPF%20Engenharia%20Controle%20e%20Automa%C3%A7%C3%A3o%2FProjeto%20Final%20Mateus%20Soares%20de%20Oliveira%2Epdf&amp;parent=%2Fpersonal%2F08211229757%5Fcefet%2Drj%5Fbr%2FDocuments%2FProjetos%20finais%2FPF%20Engenharia%20Controle%20e%20Automa%C3%A7%C3%A3o&amp;ga=1"
+                                                target="_blank" rel="noopener noreferrer">“Case Study of a Safety
+                                                Instrumented System for a Light Cycle Oil Plant” (in
+                                                Portuguese)</a></span>, <span class="what">Eng., COENCA-NI/CEFET-RJ,
+                                            with Prof. Cristiano de S. de Carvalho from CEFET-RJ, June 2025.</span>
+                                    </li>
+                                    <li>
+                                        <span class="who">Pedro Gil Oliveira de Magalhães Couto</span>, <span
+                                            class="topic"><a
+                                                href="http://www.repositorio.poli.ufrj.br/monografias/monopoli10032631.pdf"
+                                                target="_blank" rel="noopener noreferrer">“Data Augmentation in Digital
+                                                Image Processing to Aid the Detection of <i>Aedes aegypti</i> Outbreaks”
+                                                (in Portuguese)</a></span>, <span class="what">Eng., Poli/UFRJ, with
+                                            Prof. Eduardo A. B. da Silva from Poli/COPPE/UFRJ, February 2021.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---------- Teaching ---------- -->
+            <section class="section" id="teaching">
+                <div class="section__head">
+                    <span class="section__eyebrow">In the classroom</span>
+                    <h2 class="section__title">Teaching</h2>
+                </div>
+
+                <div class="acc-group">
+                    <div class="acc is-open">
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-courses" aria-expanded="true"
+                                aria-controls="p-courses">
+                                <span class="acc__label">Undergraduate Courses</span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-courses" role="region" aria-labelledby="t-courses">
+                            <div class="acc__inner">
+                                <ul class="bullets">
+                                    <li>Digital Signal Processing</li>
+                                    <li>Digital Systems</li>
+                                    <li>Electric Circuits</li>
+                                    <li>Electronic Instrumentation and Measurements</li>
+                                    <li>Introduction to Control Systems and Automation Engineering</li>
+                                    <li>Topics in Electronic and Digital Systems</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="acc is-open">
+                        <h3 class="acc__head">
+                            <button class="acc__trigger" type="button" id="t-gradcourses" aria-expanded="true"
+                                aria-controls="p-gradcourses">
+                                <span class="acc__label">Graduate Courses</span>
+                                <svg class="acc__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                        </h3>
+                        <div class="acc__panel" id="p-gradcourses" role="region" aria-labelledby="t-gradcourses">
+                            <div class="acc__inner">
+                                <ul class="bullets">
+                                    <li>Discrete-Time Signal Processing</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ---------- Contact ---------- -->
+            <section class="section" id="contact">
+                <div class="section__head">
+                    <span class="section__eyebrow">Get in touch</span>
+                    <h2 class="section__title">Contact</h2>
+                </div>
+
+                <p class="contact__email">
+                    <a href="mailto:wesley.passos@cefet-rj.br">wesley.passos@cefet-rj.br</a>
+                </p>
+
+                <div class="links contact__links">
+                    <a class="link-pill" href="https://lattes.cnpq.br/0652673084450084" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="ai ai-lattes" aria-hidden="true"></i>
+                        <span>Lattes</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://orcid.org/0000-0002-8505-8265" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="ai ai-orcid" aria-hidden="true"></i>
+                        <span>ORCID</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://scholar.google.com/citations?user=lKbLdIIAAAAJ" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="ai ai-google-scholar" aria-hidden="true"></i>
+                        <span>Google Scholar</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://www.scopus.com/authid/detail.uri?authorId=57221317962"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="ai ai-scopus" aria-hidden="true"></i>
+                        <span>Scopus</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://www.webofscience.com/wos/author/rid/AAT-6819-2021"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="ai ai-clarivate" aria-hidden="true"></i>
+                        <span>Web of Science</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://ieeexplore.ieee.org/author/37087998400" target="_blank"
+                        rel="noopener noreferrer">
+                        <i class="ai ai-ieee" aria-hidden="true"></i>
+                        <span>IEEE Xplore</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://www.researchgate.net/profile/Wesley-Lobato-Passos"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="ai ai-researchgate" aria-hidden="true"></i>
+                        <span>ResearchGate</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://www.linkedin.com/in/wesley-lobato-passos" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        <span>LinkedIn</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                    <a class="link-pill" href="https://github.com/wesleylp" target="_blank" rel="noopener noreferrer">
+                        <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg>
+                        <span>GitHub</span>
+                        <svg class="linklist__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                            <path d="M15 3h6v6M10 14L21 3" />
+                        </svg>
+                    </a>
+                </div>
+            </section>
+
+            <footer class="site-foot">
+                <span>&copy; <span data-year>2026</span> Wesley Lobato Passos</span>
+            </footer>
+        </main>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+
+    <button class="to-top" type="button" data-to-top aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script src="./js/main.js" defer></script>
 </body>
 
 </html>
